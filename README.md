@@ -10,3 +10,26 @@ pytorch>=0.4
 
 # Note
 Follow the official website of the Mid-Air dataset [here](https://midair.ulg.ac.be/) to download and place the files into the folder named "Dataset".
+
+Example data folder structure
+'''
+├── Dataset
+│   ├── train
+│   │   ├── trajectory_0000
+│   │   │   ├─ image_left
+│   │   │   │   ├── 00001.png
+│   │   │   │   └── ...
+│   │   │   ├─ image_right
+│   │   │   │   ├── 00001.png
+│   │   │   │   └── ...
+│   │   ├── trajectory_0001
+│   │   │   ├─ ...
+│   ├── test
+│   │   ├── trajectory
+│   │   │   ├─ image_left
+│   │   │   │   ├── 00001.png
+│   │   │   │   └── ...
+│   │   │   ├─ image_right
+│   │   │   │   ├── 00001.png
+│   │   │   │   └── ...
+'''

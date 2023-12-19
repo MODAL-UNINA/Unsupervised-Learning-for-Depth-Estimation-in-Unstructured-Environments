@@ -233,10 +233,10 @@ class Model:
 
 # define the parameters
 # models: resnet50_md, resnet18_md, darknet_midair_attention_md, monodepth
-dict_parameters = edict({'data_dir':'/MidAir-256/train/',
-                        'val_data_dir':'/MidAir-256/test/',
-                        'model_path':'/Depth-models/dark-attention/model-attention.pth',
-                        'output_directory':'/Depth-results/dark-attention/',
+dict_parameters = edict({'data_dir':'/Dataset/train/',
+                        'val_data_dir':'/Dataset/test/',
+                        'model_path':'/Depth-models/model-attention.pth',
+                        'output_directory':'/Depth-results/',
                         'input_height':256,
                         'input_width':256,                                  
                         'model':'darknet_midair_attention_md',
@@ -279,12 +279,12 @@ np.save(os.path.join(args.output_directory, 'val_losses.npy'), val_losses)
 
 
 # test
-dict_parameters_test = edict({'data_dir':'/MidAir-256/test/',
-                        'model_path':'/Depth-models/monodepth/model-monodepth_cpt.pth',
-                        'output_directory':'/Depth-results/monodepth/',
+dict_parameters_test = edict({'data_dir':'/Dataset/test/',
+                        'model_path':'/Depth-models/model-attention.pth',
+                        'output_directory':'/Depth-results/',
                     'input_height':256,
                     'input_width':256,
-                    'model':'monodepth',
+                    'model':'darknet_midair_attention_md',
                     'pretrained':False,
                     'mode':'test',
                     'device':'cuda:0',
